@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- 手写库 -->
+  <script src="./reactivity.global.js"></script>
+  <!-- 官方库 -->
+  <!-- <script src="../../../node_modules/@vue/reactivity/dist/reactivity.global.js"></script> -->
+  <div>数据展示</div>
+  <div id="app"></div>
+<script>
+// const {effect,reactive} =VueReactivity;
+const {reactive} =VueReactivity;
+
+const state=reactive({
+  name:"飞机",
+  age:17,
+  get num(){
+    console.log("Hi");
+  },
+  address:{
+    where:"HongKong",
+    id:"Null"
+  }
+})
+console.log(state);
+//   effect(()=>{ // 此effect函数默认会先执行一次， 对响应式数据取值(取值的过程中数据会依赖于当前的effecgt)
+//         document.getElementById('app').innerHTML = state.name + '今年' + state.age +'岁了' ;
+//       });
+//  setTimeout(()=>{
+//   state.age=18
+//  },2000)
+
+</script>
+</body>
+</html> 

@@ -58,6 +58,9 @@ var VueReactivity = (() => {
     reactiveMap.set(target, proxy);
     return proxy;
   }
+
+  // packages/reactivity/src/index.ts
+  console.log("Hi");
   return __toCommonJS(src_exports);
 })();
 //# sourceMappingURL=reactivity.global.js.map

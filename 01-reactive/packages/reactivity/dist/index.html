@@ -22,14 +22,14 @@ const state=reactive({
   name:"飞机",
   age:17,
   get num(){
-    console.log("Hi");
+    // console.log("Hi");
   },
   address:{
     where:"HongKong",
     id:"Null"
   }
 })
-console.log(state);
+console.log(state.address);
 //   effect(()=>{ // 此effect函数默认会先执行一次， 对响应式数据取值(取值的过程中数据会依赖于当前的effecgt)
 //         document.getElementById('app').innerHTML = state.name + '今年' + state.age +'岁了' ;
 //       });

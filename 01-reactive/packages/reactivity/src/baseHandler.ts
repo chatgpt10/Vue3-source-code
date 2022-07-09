@@ -5,6 +5,7 @@ export const enum ReactiveFlags {
 
 export const mutableHandlers ={
   get(target,key,receiver){
+    // 如果代理过，直接返回
     if(key===ReactiveFlags.IS_REACTIVE){
       return true;
     }
